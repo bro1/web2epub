@@ -1,0 +1,3 @@
+*.epub
+/bin
+/web2epub.log

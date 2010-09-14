@@ -1,0 +1,53 @@
+<project>
+
+ <!-- <property name="minej.location" location="../minej-dev/"/> -->
+ <!-- <property name="system.libs.location" location="/usr/share/java/"/> -->
+ <property name="libs.location" location="lib"/>
+
+ <path id="j.cp.run">
+    <pathelement location="bin/"/>
+ 	<!--
+    <pathelement path="${libs.location}/lib/httpclient-4.0-beta2.jar"/>
+    <pathelement path="${libs.location}/lib/httpmime-4.0-beta2.jar"/>
+    <pathelement path="${libs.location}/lib/httpcore-4.0.jar"/>
+    <pathelement path="${libs.location}/lib/httpcore-nio-4.0.jar"/>		
+	<pathelement path="${libs.location}/lib/tagsoup/tagsoup-1.2.jar"/>	
+	
+	<pathelement path="${libs.location}/lib/log4j-1.2.14.jar"/>	
+-->
+ 	<!--
+	<pathelement path="${minej.location}/lib/commons-logging/commons-logging-1.1.jar"/>	
+	<pathelement path="${minej.location}/lib/commons-logging/commons-logging-adapters-1.1.jar"/>	
+	<pathelement path="${minej.location}/lib/commons-logging/commons-logging-api-1.1.jar"/>	
+	
+	<pathelement path="${system.libs.location}/jdom1.jar"/>	
+	<pathelement path="${system.libs.location}/jaxen.jar"/>		
+	<pathelement path="${system.libs.location}/commons-net.jar"/>		
+	-->
+ 	
+	<fileset dir="${libs.location}">
+      <include name="**/*.jar"/>
+    </fileset>
+
+	<!-- <pathelement location="${minej.location}/bin"/> -->	
+	
+  </path>
+	
+  <target name="compile">
+    <javac classpathref="j.cp.run" srcdir="src" destdir="bin"/>	  	
+  </target>
+
+  <target name="run" description="Run the slashdot.org to epub conversion">
+    <java classname="lj.epub.sd.SlashDotSite" classpathref="j.cp.run"/>
+  </target>
+  
+  <target name="run.wtf" description="Run the thedailywtf.com to epub conversion">
+    <java classname="lj.epub.wtf.WTFSite" classpathref="j.cp.run"/>
+  </target>
+  
+  <target name="run.stuff" description="Run the stuff.co.nz to epub conversion">
+    <java classname="lj.epub.stuff.StuffSite" classpathref="j.cp.run"/>
+  </target>
+
+
+</project>
