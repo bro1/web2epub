@@ -11,7 +11,15 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import lj.epub.sd.utils.EpubUtils;
+import lj.utils.epub.EpubUtils;
+import lj.utils.filter.SimpleLinkInformationProducer;
+import lj.utils.links.Extractor;
+import lj.utils.links.LinkInformation;
+import lj.utils.log.Log;
+import lj.utils.net.http.HttpUtil;
+import lj.utils.regex.PatternCompiler;
+import lj.utils.xml.XMLUtils;
+import lj.utils.xml.XPathUtils;
 
 import org.apache.log4j.Logger;
 import org.jdom.Document;
@@ -20,14 +28,6 @@ import org.jdom.JDOMException;
 import org.jdom.filter.Filter;
 import org.jdom.output.XMLOutputter;
 
-import bro1.mine.filter.SimpleLinkInformationProducer;
-import bro1.utils.http.HttpUtil;
-import bro1.utils.regex.PatternCompiler;
-import bro1.mine.utils.Extractor;
-import bro1.mine.utils.LinkInformation;
-import bro1.utils.log.Log;
-import bro1.utils.xml.XMLUtils;
-import bro1.utils.xml.XPathUtils;
 
 import com.adobe.dp.epub.ncx.TOCEntry;
 import com.adobe.dp.epub.opf.NCXResource;
@@ -50,7 +50,7 @@ public class SlashDotSite {
     SimpleLinkInformationProducer sip = new SimpleLinkInformationProducer("http:");
     
     Extractor extractor = new Extractor();
-    bro1.mine.filter.Filter urlFilter = new SlashDotStoryLinkFilter();
+    lj.utils.filter.Filter urlFilter = new SlashDotStoryLinkFilter();
     Document indexDoc = xml.buildDocument(slashDotIndex);
     extractor.extract(indexDoc, urlFilter, sip);
         

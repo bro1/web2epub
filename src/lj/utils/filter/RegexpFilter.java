@@ -1,13 +1,14 @@
-package bro1.mine.filter;
+package lj.utils.filter;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import lj.utils.log.Log;
+import lj.utils.regex.PatternCompiler;
+
 import org.apache.log4j.Logger;
 import org.jdom.Attribute;
 
-import bro1.utils.log.Log;
-import bro1.utils.regex.PatternCompiler;
 
 public class RegexpFilter implements Filter {
 

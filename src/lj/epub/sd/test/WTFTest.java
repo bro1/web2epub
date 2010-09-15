@@ -6,14 +6,14 @@ import java.util.List;
 import junit.framework.TestCase;
 import lj.epub.sd.SlashDotSite;
 import lj.epub.wtf.WTFSite;
+import lj.utils.string.StringUtil;
+import lj.utils.xml.XMLUtils;
+import lj.utils.xml.XPathUtils;
 
 import org.jdom.Document;
 import org.jdom.Element;
 import org.jdom.JDOMException;
 
-import bro1.utils.string.StringUtil;
-import bro1.utils.xml.XMLUtils;
-import bro1.utils.xml.XPathUtils;
 
 class WTFSiteMock extends WTFSite {
 

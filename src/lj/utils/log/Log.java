@@ -1,4 +1,4 @@
-package bro1.utils.log;
+package lj.utils.log;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;

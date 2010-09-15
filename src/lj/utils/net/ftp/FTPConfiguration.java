@@ -1,4 +1,4 @@
-package bro1.mine;
+package lj.utils.net.ftp;
 
 import java.util.ResourceBundle;
 

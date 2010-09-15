@@ -1,7 +1,9 @@
-package bro1.utils.xml;
+package lj.utils.xml;
 
 import java.io.IOException;
 import java.util.List;
+
+import lj.utils.log.Log;
 
 import org.apache.log4j.Logger;
 import org.jdom.Attribute;
@@ -11,7 +13,6 @@ import org.jdom.JDOMException;
 import org.jdom.Text;
 import org.jdom.xpath.XPath;
 
-import bro1.utils.log.Log;
 
 public class XPathUtils {
     

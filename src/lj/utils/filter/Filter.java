@@ -1,4 +1,4 @@
-package bro1.mine.filter;
+package lj.utils.filter;
 
 import org.jdom.Attribute;
 

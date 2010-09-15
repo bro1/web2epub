@@ -1,7 +1,9 @@
-package bro1.mine.utils;
+package lj.utils.net.ftp;
 
 import java.io.File;
 import java.io.FileInputStream;
+
+import lj.utils.log.Log;
 
 import org.apache.commons.net.ftp.FTP;
 import org.apache.commons.net.ftp.FTPClient;
@@ -9,8 +11,6 @@ import org.apache.commons.net.ftp.FTPReply;
 import org.apache.log4j.Logger;
 
 
-import bro1.mine.FTPConfiguration;
-import bro1.utils.log.Log;
 
 public class FtpUtil {
 

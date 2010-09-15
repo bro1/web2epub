@@ -1,4 +1,4 @@
-package lj.epub.sd.utils;
+package lj.utils.epub;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;

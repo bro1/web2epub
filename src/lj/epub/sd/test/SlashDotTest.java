@@ -4,10 +4,10 @@ import java.util.List;
 
 import junit.framework.TestCase;
 import lj.epub.sd.SlashDotSite;
+import lj.utils.string.StringUtil;
 
 import org.jdom.Element;
 
-import bro1.utils.string.StringUtil;
 
 class SD extends SlashDotSite {
 

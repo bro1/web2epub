@@ -1,4 +1,4 @@
-package lj.epub.sd.utils;
+package lj.utils.epub;
 
 public enum ImageType {
   jpg("image/jpeg"),

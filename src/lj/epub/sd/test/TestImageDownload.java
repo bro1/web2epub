@@ -5,7 +5,7 @@ import java.net.URL;
 import java.net.URLEncoder;
 
 import junit.framework.TestCase;
-import bro1.utils.http.HttpUtil;
+import lj.utils.net.http.HttpUtil;
 
 
 public class TestImageDownload extends TestCase {

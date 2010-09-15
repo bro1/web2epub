@@ -1,4 +1,4 @@
-package bro1.utils.string;
+package lj.utils.string;
 
 import java.io.File;
 import java.io.FileInputStream;

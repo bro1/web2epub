@@ -1,8 +1,9 @@
 package lj.epub.sd;
 
+import lj.utils.filter.Filter;
+
 import org.jdom.Attribute;
 
-import bro1.mine.filter.Filter;
 
 public class SlashDotStoryLinkFilter implements Filter {
 

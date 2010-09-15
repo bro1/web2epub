@@ -6,21 +6,21 @@ import java.text.SimpleDateFormat;
 import java.util.GregorianCalendar;
 import java.util.List;
 
-import lj.epub.sd.utils.EpubUtils;
+import lj.utils.epub.EpubUtils;
+import lj.utils.filter.RegexpFilter;
+import lj.utils.filter.SimpleLinkInformationProducer;
+import lj.utils.links.Extractor;
+import lj.utils.links.LinkInformation;
+import lj.utils.log.Log;
+import lj.utils.net.http.HttpUtil;
+import lj.utils.xml.XMLUtils;
+import lj.utils.xml.XPathUtils;
 
 import org.apache.log4j.Logger;
 import org.jdom.Document;
 import org.jdom.Element;
 import org.jdom.JDOMException;
 
-import bro1.mine.filter.RegexpFilter;
-import bro1.mine.filter.SimpleLinkInformationProducer;
-import bro1.mine.utils.Extractor;
-import bro1.mine.utils.LinkInformation;
-import bro1.utils.http.HttpUtil;
-import bro1.utils.log.Log;
-import bro1.utils.xml.XMLUtils;
-import bro1.utils.xml.XPathUtils;
 
 import com.adobe.dp.epub.opf.Publication;
 import com.adobe.dp.epub.ops.OPSDocument;
@@ -162,7 +162,7 @@ public class StuffSite {
     SimpleLinkInformationProducer sip = new SimpleLinkInformationProducer("http://www.stuff.co.nz");
     
     Extractor extractor = new Extractor();
-    bro1.mine.filter.Filter urlFilter = new RegexpFilter("^\\/(?!rss\\/).*[^/]$");
+    lj.utils.filter.Filter urlFilter = new RegexpFilter("^\\/(?!rss\\/).*[^/]$");
     extractor.extract(contentDoc, urlFilter, sip);
         
     return extractor.getList();

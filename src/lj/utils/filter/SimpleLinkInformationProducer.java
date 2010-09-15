@@ -1,6 +1,6 @@
-package bro1.mine.filter;
+package lj.utils.filter;
 
-import bro1.mine.utils.LinkInformation;
+import lj.utils.links.LinkInformation;
 
 public class SimpleLinkInformationProducer implements LinkInformationProducer {
 

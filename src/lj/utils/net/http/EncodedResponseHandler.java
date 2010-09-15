@@ -1,4 +1,4 @@
-package bro1.utils.http;
+package lj.utils.net.http;
 
 import java.io.IOException;
 
@@ -11,11 +11,16 @@ import org.apache.http.client.ResponseHandler;
 import org.apache.http.util.EntityUtils;
 
 
-public class BinaryResponseHandler implements ResponseHandler<byte[]> {
+public class EncodedResponseHandler implements ResponseHandler<String> {
 
+  private String encoding;
+  
+  public EncodedResponseHandler(String encoding) {
+    this.encoding = encoding; 
+  }
   
   @Override
-  public byte[] handleResponse(HttpResponse response)
+  public String handleResponse(HttpResponse response)
       throws ClientProtocolException, IOException {
         
     StatusLine statusLine = response.getStatusLine();
@@ -26,7 +31,7 @@ public class BinaryResponseHandler implements ResponseHandler<byte[]> {
     }
 
     HttpEntity entity = response.getEntity();
-    return entity == null ? null : EntityUtils.toByteArray(entity);
+    return entity == null ? null : EntityUtils.toString(entity, encoding);
   }
 
 }

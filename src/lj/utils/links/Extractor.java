@@ -1,16 +1,17 @@
-package bro1.mine.utils;
+package lj.utils.links;
 
 import java.util.LinkedList;
 import java.util.List;
+
+import lj.utils.filter.Filter;
+import lj.utils.filter.LinkInformationProducer;
+import lj.utils.log.Log;
+import lj.utils.xml.XPathUtils;
 
 import org.apache.log4j.Logger;
 import org.jdom.Attribute;
 import org.jdom.Document;
 
-import bro1.mine.filter.Filter;
-import bro1.mine.filter.LinkInformationProducer;
-import bro1.utils.log.Log;
-import bro1.utils.xml.XPathUtils;
 
 public class Extractor {
 

@@ -1,4 +1,4 @@
-package bro1.mine.utils;
+package lj.utils.links;
 
 import java.util.regex.Matcher;
 

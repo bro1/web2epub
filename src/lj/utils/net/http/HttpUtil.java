@@ -1,10 +1,13 @@
-package bro1.utils.http;
+package lj.utils.net.http;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+
+import lj.utils.log.Log;
+import lj.utils.string.StringUtil;
 
 import org.apache.http.client.ResponseHandler;
 import org.apache.http.client.methods.HttpGet;
@@ -15,8 +18,6 @@ import org.apache.http.params.HttpConnectionParams;
 import org.apache.http.params.HttpParams;
 import org.apache.log4j.Logger;
 
-import bro1.utils.log.Log;
-import bro1.utils.string.StringUtil;
 
 public class HttpUtil {
 

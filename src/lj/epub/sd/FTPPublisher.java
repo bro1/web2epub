@@ -2,11 +2,12 @@ package lj.epub.sd;
 
 import java.io.File;
 
+import lj.utils.log.Log;
+import lj.utils.net.ftp.FTPConfiguration;
+import lj.utils.net.ftp.FtpUtil;
+
 import org.apache.log4j.Logger;
 
-import bro1.mine.FTPConfiguration;
-import bro1.mine.utils.FtpUtil;
-import bro1.utils.log.Log;
 
 public class FTPPublisher {
 

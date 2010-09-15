@@ -1,9 +1,11 @@
-package bro1.utils.xml;
+package lj.utils.xml;
 
 //import java.io.ByteArrayInputStream;
 import java.io.StringReader;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import lj.utils.regex.PatternCompiler;
 
 //import org.apache.xerces.parsers.DOMParser;
 //import org.cyberneko.html.HTMLConfiguration;
@@ -17,7 +19,6 @@ import org.jdom.output.XMLOutputter;
 //import org.xamjwg.html.test.SimpleHtmlParserContext;
 //import org.xml.sax.InputSource;
 
-import bro1.utils.regex.PatternCompiler;
 
 public class XMLUtils {
   private SAXBuilder saxBuilder;

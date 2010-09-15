@@ -1,4 +1,4 @@
-package lj.epub.sd.utils;
+package lj.utils.epub;
 
 import java.io.ByteArrayInputStream;
 import java.io.FileNotFoundException;
@@ -14,14 +14,15 @@ import javax.imageio.ImageIO;
 import javax.imageio.ImageReader;
 import javax.imageio.stream.ImageInputStream;
 
+import lj.utils.log.Log;
+import lj.utils.net.http.HttpUtil;
+
 import org.apache.log4j.Logger;
 import org.jdom.Content;
 import org.jdom.Element;
 import org.jdom.Text;
 import org.jdom.filter.Filter;
 
-import bro1.utils.http.HttpUtil;
-import bro1.utils.log.Log;
 
 import com.adobe.dp.epub.io.DataSource;
 import com.adobe.dp.epub.io.OCFContainerWriter;
