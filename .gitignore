@@ -1,3 +1,4 @@
 *.epub
 /bin
 /web2epub.log
+/web2epub.jar
