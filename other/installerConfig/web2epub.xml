@@ -1,7 +1,7 @@
 <launch4jConfig>
   <dontWrapJar>true</dontWrapJar>
-  <headerType>gui</headerType>
-  <jar>../../web2epub.jar</jar>
+  <headerType>console</headerType>
+  <jar>web2epub.jar</jar>
   <outfile>web2epub.exe</outfile>
   <errTitle></errTitle>
   <cmdLine></cmdLine>
@@ -15,13 +15,13 @@
   <icon></icon>
   <classPath>
     <mainClass>lj.epub.sd.SlashDotSite</mainClass>
-    <cp>../../lib/*.jar</cp>
+    <cp>lib/*.jar</cp>
   </classPath>
   <jre>
-    <path></path>
+    <path>jre</path>
     <minVersion>1.6.0</minVersion>
     <maxVersion></maxVersion>
-    <jdkPreference>jreOnly</jdkPreference>
+    <jdkPreference>preferJre</jdkPreference>
   </jre>
   <messages>
     <startupErr>An error occurred while starting the application.</startupErr>

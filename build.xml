@@ -1,6 +1,10 @@
 <project>
 
 	<property name="libs.location" location="lib" />
+	<property name="build.installer" location="build/installer" />
+
+	<property file="build.properties" />
+
 
 	<path id="j.cp.run">
 		<pathelement location="bin/" />
@@ -15,9 +19,9 @@
 	<target name="compile" description="Compile the source">
 		<mkdir dir="bin"/>
 		<javac classpathref="j.cp.run" srcdir="src" destdir="bin" />
-		<copy todir="bin" >
+		<copy todir="bin">
 			<fileset dir="src">
-				<include name="*.properties"/>				
+				<include name="*.properties" />
 			</fileset>
 		</copy>
 	</target>
@@ -38,6 +42,77 @@
 		<jar destfile="web2epub.jar" basedir="bin">
 			<!-- <exclude name="settings.properties" />-->
 		</jar>
+	</target>
+
+	<target name="clean">
+		<delete dir="build" />
+	</target>
+
+	<target name="build.installer.i568">
+
+
+		<delete dir="build/installer" />
+
+		<mkdir dir="build/installer" />
+
+
+		<exec executable="${setup.7z.file}" dir="${build.installer}">
+			<arg value="e" />
+			<arg value="${setup.jre.installer.i586.location}" />
+			<arg value=".rsrc\JAVA_INSTALLER\102" />
+		</exec>
+
+
+		<exec executable="${setup.7z.file}" dir="${build.installer}">
+			<arg value="e" />
+			<arg value="102" />
+			<arg value="core.zip" />
+		</exec>
+
+
+
+		<unzip src="${build.installer}/core.zip" dest="${build.installer}/jre" />
+		<exec executable="${setup.unpack200.file}" dir="build/installer/jre/lib">
+			<arg value="-r" />
+			<arg value="charsets.pack" />
+			<arg value="charsets.jar" />
+		</exec>
+		<exec executable="${setup.unpack200.file}" dir="build/installer/jre/lib">
+			<arg value="-r" />
+			<arg value="deploy.pack" />
+			<arg value="deploy.jar" />
+		</exec>
+		<exec executable="${setup.unpack200.file}" dir="build/installer/jre/lib">
+			<arg value="-r" />
+			<arg value="javaws.pack" />
+			<arg value="javaws.jar" />
+		</exec>
+		<exec executable="${setup.unpack200.file}" dir="build/installer/jre/lib">
+			<arg value="-r" />
+			<arg value="jsse.pack" />
+			<arg value="jsse.jar" />
+		</exec>
+		<exec executable="${setup.unpack200.file}" dir="build/installer/jre/lib">
+			<arg value="-r" />
+			<arg value="plugin.pack" />
+			<arg value="plugin.jar" />
+		</exec>
+		<exec executable="${setup.unpack200.file}" dir="build/installer/jre/lib">
+			<arg value="-r" />
+			<arg value="rt.pack" />
+			<arg value="rt.jar" />
+		</exec>
+		<exec executable="${setup.unpack200.file}" dir="build/installer/jre/lib/ext">
+			<arg value="-r" />
+			<arg value="localedata.pack" />
+			<arg value="localedata.jar" />
+		</exec>
+
+
+		<exec executable="${setup.innosettup.location}\\iscc.exe">
+			<arg value="other\\installerConfig\\setupconfig.iss" />
+		</exec>
+
 	</target>
 
 </project>
