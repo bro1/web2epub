@@ -210,7 +210,7 @@ public class Web2EpubGUI {
 	private JLabel getAboutVersionLabel() {
 		if (aboutVersionLabel == null) {
 			aboutVersionLabel = new JLabel();
-			aboutVersionLabel.setText("Version 1.0");
+			aboutVersionLabel.setText("Web2Epub - Version 1.0");
 			aboutVersionLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		}
 		return aboutVersionLabel;
@@ -287,6 +287,11 @@ public class Web2EpubGUI {
 		if (jButton2 == null) {
 			jButton2 = new JButton();
 			jButton2.setText("thedailywtf.com");
+			jButton2.addActionListener(new java.awt.event.ActionListener() {
+				public void actionPerformed(java.awt.event.ActionEvent e) {
+					System.out.println("actionPerformed()"); // TODO Auto-generated Event stub actionPerformed()
+				}
+			});
 		}
 		return jButton2;
 	}
