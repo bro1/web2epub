@@ -16,5 +16,6 @@
 	<classpathentry kind="lib" path="lib/commons-logging-adapters-1.1.jar"/>
 	<classpathentry kind="lib" path="lib/commons-logging-api-1.1.jar"/>
 	<classpathentry kind="lib" path="lib/tagsoup-1.2.jar"/>
+	<classpathentry kind="lib" path="lib/jaxen-1.1.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

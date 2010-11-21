@@ -4,6 +4,10 @@ import java.util.ResourceBundle;
 
 public class FTPConfiguration {
 
+	public static void main(String[] args) {
+		System.out.println("Test");
+	} 
+	
 	public boolean isEnabled() {
 		return !(getExportFTPServer() == null || ""
 				.equals(getExportFTPServer()));
@@ -24,7 +28,7 @@ public class FTPConfiguration {
 	static private ResourceBundle props;
 
 	static {
-		props = ResourceBundle.getBundle("/settings");
+		props = ResourceBundle.getBundle("settings");
 	}
 
 }

@@ -12,7 +12,8 @@
 
 	</path>
 
-	<target name="compile">
+	<target name="compile" description="Compile the source">
+		<mkdir dir="bin"/>
 		<javac classpathref="j.cp.run" srcdir="src" destdir="bin" />
 		<copy todir="bin" >
 			<fileset dir="src">
@@ -38,6 +39,5 @@
 			<!-- <exclude name="settings.properties" />-->
 		</jar>
 	</target>
-
 
 </project>
